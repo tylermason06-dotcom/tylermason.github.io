@@ -1,27 +1,347 @@
-Tyler Mason
-Marketing Student
-University of Utah
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tyler — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #EAE6DC;
+    --surface: #F5F2EA;
+    --ink: #201E1A;
+    --ink-soft: #5B564C;
+    --pine: #2F5233;
+    --pine-deep: #1F3A24;
+    --mustard: #C08A28;
+    --line: #D8D2C3;
+    --maxw: 780px;
+  }
 
-About me
-Im a marketing major at the University Of Utah and I am veyr interested in the music side of business.
-I run a electronic music events company in Salt Lake City, I handle everthing from artists booking to
-brand management. 
+  * { box-sizing: border-box; }
 
-Skills
-Brand development & positioning
-Event marketing & promotion
-Social media strategy
-Marketing fundamentals (coursework-backed)
-Artist booking & talent relations
-Live event production & logistics
-Vendor/gear negotiation
-Team coordination & leadership
-Music production (Ableton Live)
-Sound/genre curation (house, electronic)
-Culture-forward creative direction
-Small business/LLC operations
-Project management
-Networking (artist & industry relationships)
+  html { scroll-behavior: smooth; }
 
-Resume
-https://docs.google.com/document/d/1SP1huxqS3rTOz8gL3bbS17BkIET0cZIV/edit?usp=sharing&ouid=111553391711671115344&rtpof=true&sd=true
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--pine-deep); }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--pine); outline-offset: 3px; }
+
+  .wrap{
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---- Nav ---- */
+  nav{
+    border-bottom: 1px solid var(--line);
+    background: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav .brand{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  nav ul{
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  nav a{
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+  nav a:hover{ color: var(--pine-deep); }
+
+  /* ---- Header / hero ---- */
+  header.hero{
+    padding: 88px 0 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  header.hero .name{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: 1.05;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+  header.hero .title{
+    font-size: 1.15rem;
+    color: var(--pine-deep);
+    margin: 0 0 6px;
+    font-weight: 500;
+  }
+  header.hero .school{
+    color: var(--ink-soft);
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  section{
+    padding: 56px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-of-type{ border-bottom: none; }
+
+  h2{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 0 0 20px;
+  }
+
+  #about p{
+    max-width: 62ch;
+    color: var(--ink);
+    font-size: 1.05rem;
+  }
+
+  /* ---- Skills ---- */
+  .skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .skills li{
+    border: 1px solid var(--pine);
+    color: var(--pine-deep);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    background: var(--surface);
+  }
+
+  /* ---- Projects table ---- */
+  table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98rem;
+  }
+  thead th{
+    text-align: left;
+    font-weight: 600;
+    color: var(--ink-soft);
+    border-bottom: 2px solid var(--ink);
+    padding: 10px 12px 10px 0;
+    font-size: 0.9rem;
+  }
+  tbody td{
+    padding: 16px 12px 16px 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody td.proj-name{
+    font-weight: 600;
+    white-space: nowrap;
+    padding-right: 24px;
+    color: var(--ink);
+  }
+  tbody tr:last-child td{ border-bottom: none; }
+  .status{
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: var(--mustard);
+    font-weight: 500;
+  }
+
+  /* ---- Resume / contact ---- */
+  .btn{
+    display: inline-block;
+    background: var(--pine);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.98rem;
+  }
+  .btn:hover{ background: var(--pine-deep); }
+  .btn.pending{
+    background: transparent;
+    color: var(--ink-soft);
+    border: 1px dashed var(--ink-soft);
+  }
+
+  .contact-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.02rem;
+  }
+
+  footer{
+    padding: 32px 0 60px;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+
+  @media (max-width: 560px){
+    header.hero{ padding: 64px 0 40px; }
+    section{ padding: 40px 0; }
+    tbody td.proj-name{ white-space: normal; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Tyler</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="name" style="margin-bottom:0;">Tyler [Last Name]</p>
+    <p class="title">Marketing Student</p>
+    <p class="school">University of Utah</p>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About Me</h2>
+    <p>
+      I'm a marketing student interested in how data and AI are reshaping the way businesses
+      understand and reach people. I'm drawn to analytics, information systems, and the tools
+      that turn raw numbers into decisions — and I'm especially curious about applying AI to
+      real business problems like customer segmentation, campaign performance, and process
+      automation. Outside the classroom, I run a small events and brand-building venture, which
+      has pushed me to think practically about marketing, operations, and technology at the same
+      time. This site tracks the projects and skills I'm building throughout the semester.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>Git</li>
+      <li>GitHub</li>
+      <li>Microsoft Excel</li>
+      <li>Data Analytics</li>
+      <li>AI Prompt Engineering</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="proj-name">AI Business Analysis</td>
+          <td>Analyzing business data with AI tools to surface trends and recommendations.
+            <span class="status">In progress</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="proj-name">Data Visualization</td>
+          <td>A dashboard built to make a business dataset easy to explore and act on.
+            <span class="status">Coming soon</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="proj-name">Web Development</td>
+          <td>A responsive website built with HTML, CSS, and a framework like Bootstrap.
+            <span class="status">Coming soon</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="proj-name">Process Improvement</td>
+          <td>Redesigning a business workflow with AI-assisted tools to save time or reduce errors.
+            <span class="status">Coming soon</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="wrap">
+    <h2>Resume</h2>
+    <!--
+      Once you have a PDF resume, upload it to this repo (e.g. resume.pdf)
+      and swap the line below for:
+      <a class="btn" href="resume.pdf" download>Download Resume (PDF)</a>
+    -->
+    <span class="btn pending">Resume coming soon</span>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto:your.email@utah.edu">your.email@utah.edu</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></li>
+      <li>GitHub: <a href="https://github.com/yourusername" target="_blank" rel="noopener">github.com/yourusername</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    &copy; 2026 Tyler. Built with HTML &amp; CSS, hosted on GitHub Pages.
+  </div>
+</footer>
+
+</body>
+</html>
